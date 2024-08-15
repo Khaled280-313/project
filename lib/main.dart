@@ -11,18 +11,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.yellowAccent,
         appBar: AppBar(
           title: const Text("Kaled"),
           backgroundColor: const Color.fromARGB(184, 128, 64, 207),
         ),
-        body: const Text(
-          "KHaled",
-          style: TextStyle(
-              color: Colors.purple,
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              backgroundColor: Color.fromARGB(184, 82, 226, 82)),
-        ),
+        body: Center(
+          child: Image.asset("assets/images/breakfast.PNG"),
+        )
       ),
     );
   }
