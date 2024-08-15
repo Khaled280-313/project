@@ -10,10 +10,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:Scaffold(
-        appBar: AppBar(title:  const Text("Kaled"),) ,
-        body: const Text("KHaled"),
-
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("Kaled"),
+          backgroundColor: const Color.fromARGB(184, 128, 64, 207),
+        ),
+        body: const Text(
+          "KHaled",
+          style: TextStyle(
+              color: Colors.purple,
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              backgroundColor: Color.fromARGB(184, 82, 226, 82)),
+        ),
       ),
     );
   }
