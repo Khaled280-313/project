@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
             title: const Text("Kaled"),
             backgroundColor: const Color.fromARGB(184, 128, 64, 207),
           ),
-          body: Row(
+          body: Column(
             children: [
               Container(
                 width: 200,
