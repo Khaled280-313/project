@@ -16,7 +16,9 @@ class MyApp extends StatelessWidget {
             title: const Text("Kaled"),
             backgroundColor: const Color.fromARGB(184, 128, 64, 207),
           ),
-          body: Column(
+          body: SingleChildScrollView(
+            
+              child: Column(
             children: [
               Container(
                 width: 200,
@@ -36,7 +38,7 @@ class MyApp extends StatelessWidget {
                 child: Image.asset("assets/images/breakfast.PNG"),
               )
             ],
-          )),
+          ))),
     );
   }
 }
