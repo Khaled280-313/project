@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:teast/generated/l10n.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -10,12 +13,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+       localizationsDelegates: const [
+                S.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+            ],
+            supportedLocales: S.delegate.supportedLocales,
       home: Scaffold(
         appBar: AppBar(
           title: const Text("Example"),
           backgroundColor: const Color.fromARGB(255, 7, 137, 224),
         ),
         body: Container(
+          
           child: Column(
             children: [
               Container(
@@ -87,7 +98,7 @@ class MyApp extends StatelessWidget {
               Container(
                   width: 500,
                   margin: const EdgeInsets.fromLTRB(6, 7, 6, 5),
-                  padding: EdgeInsets.symmetric(vertical: 15),
+                  padding: const EdgeInsets.symmetric(vertical: 15),
                   decoration: BoxDecoration(
                       color: const Color.fromARGB(255, 190, 222, 249),
                       border: Border.all(color: Colors.black, width: 1.5)),
